@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kanit:ital,wght@1,900&display=swap");
+
+body {
+
+    background: #2941ab;
+}
+
+.center {
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.navbar {
+    background: #1cd364;
+    font-family: "Bree Serif";
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 30px 0;
+    background: crimson;
+}
+
+#myTable {
+    font-family: "Bree Serif";
+}
+
+th {
+    background-color: #1ed760;
+    color: white;
+}
+
+td {
+    color: #1ed760;
+}
+
+.foot {
+    color: black;
+}
+
+.btn {
+    background: #1cd364;
+    color:#2941ab;
+    font-family: "Bree Serif";
+}
+
+#myInput {
+    background: #1ed760;
+    color: black;
+    font-family: "Bree Serif";
+}
+
+p {
+    font-family: "Bree Serif";
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.link {
+    color:#1ed760;
+}
+
+.span {
+
+    color:#1ed760;
+
+}

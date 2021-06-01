@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Top 5 Songs
+{% endblock %}
+
+{% block main %}
+
+
+    <div style = "overflow-x:auto;">
+    <table class = "table table-hover"  id = "myTable">
+        <thead class = "header">
+            <th>Song</th>
+            <th>Artist</th>
+            <th>Frequency</th>
+
+        </thead>
+
+
+
+        <tbody>
+            {% for i in songs %}
+            <tr>
+                <td>{{i.song}}</td>
+                <td>{{i.artist}}</td>
+                <td>{{i.frequency}}</td>
+
+
+            </tr>
+
+            {% endfor %}
+
+            <tr>
+                 <td colspan = "4"><em></em></td>
+                 <td></td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+    </div>
+
+
+
+{% endblock %}

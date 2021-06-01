@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+
+
+
+    <form action="/" method="POST">
+
+         <div class="container">
+
+             <div class = "description center">
+                <p>Go to: <a class="link" href="https://developer.spotify.com/console/get-recently-played/" target = "_blank"> This Spotify Page  </p>
+               </a>
+            </div>
+
+             <div class = "description center">
+
+                <p>Log in and get <span class="span">Token</span> </p>
+            </div>
+
+
+
+            <div class = "description center">
+                <p>Enter your Spotify Developer <span class="span">Token:</span> </p>
+            </div>
+
+
+            <div class = "form-group">
+                <input class = "form-control" autocomplete = "off" autofocus name = "token" type="text" placeholder = "Enter Spotify token">
+            </div>
+
+
+            <div class="center">
+                <button class="btn btn-primary" type = "submit">Submit Token</button>
+            </div>
+
+
+        </div>
+
+    </form>
+
+
+
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search all listened songs..
+{% endblock %}
+
+{% block main %}
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+  <div class = "search2">
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+    <div style = "overflow-x:auto;">
+    <table class = "table table-hover"  id = "myTable">
+        <thead class = "header">
+            <th>Song</th>
+            <th>Artist</th>
+            <th>Date</th>
+            <th>Time</th>
+
+        </thead>
+
+        <tfoot>
+            <tr>
+                <td colspan = "4"></td>
+                <td> </td>
+            </tr>
+        </tfoot>
+
+        <tbody>
+            {% for i in songs %}
+            <tr>
+                <td>{{i.Song}}</td>
+                <td>{{i.Artist}}</td>
+                <td>{{i.Date}}</td>
+                <td>{{i.Time}}</td>
+
+
+            </tr>
+
+            {% endfor %}
+
+            <tr>
+                 <td colspan = "4"><em></em></td>
+                 <td></td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+    </div>
+
+    </div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});</script>
+
+
+{% endblock %}
